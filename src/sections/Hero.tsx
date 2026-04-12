@@ -47,7 +47,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-brand-400/10 border border-brand-400/20 mb-10"
         >
           <div className="w-2 h-2 rounded-full bg-brand-400 animate-pulse" />
-          <span className="text-sm font-mono text-brand-300 tracking-wider">
+          <span className="text-xl sm:text-2xl font-mono font-bold text-brand-300 tracking-wider">
             FINAL YEAR PROJECT — 2025-2026
           </span>
         </motion.div>

@@ -107,22 +107,12 @@ export default function Conclusion() {
           transition={{ delay: 0.8 }}
           className="mt-16 pt-8 border-t border-navy-500/20"
         >
-          <p className="text-sm text-white/65 font-mono">
-            IntelliHire — FAST NUCES Karachi — FYP 2025-2026
-          </p>
-          <p className="text-sm text-white/55 mt-2">
-            Muhammad Omer Khan · Muhib Siddiqui · Syed Muhammad Salik Ahmed
-          </p>
-          <p className="text-sm text-white/50 mt-1">
-            Supervised by Miss Sobia Iftikhar
-          </p>
-
-          <motion.p
+           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 1 }}
-            className="mt-10 text-2xl sm:text-3xl font-heading font-bold gradient-text"
+            className="mt-10 text-4xl sm:text-5xl font-heading font-extrabold gradient-text"
           >
             Thank You!
           </motion.p>
@@ -131,11 +121,22 @@ export default function Conclusion() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 1.2 }}
-            className="text-sm text-white/50 mt-2"
+            className="text-lg text-white/60 mt-4 mb-10"
           >
             We appreciate your time and welcome any questions.
           </motion.p>
+
+          <p className="text-xl text-white/80 font-mono mt-10 mb-2">
+            IntelliHire — FAST NUCES Karachi — FYP 2025-2026
+          </p>
+          <p className="text-lg text-white/70 mt-2">
+            Muhammad Omer Khan · Muhib Siddiqui · Syed Muhammad Salik Ahmed
+          </p>
+          <p className="text-base text-white/60 mt-2">
+            Supervised by Miss Sobia Iftikhar
+          </p>
         </motion.div>
+        
       </div>
     </section>
   )
