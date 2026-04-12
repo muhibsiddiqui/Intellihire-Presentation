@@ -268,7 +268,7 @@ export default function Deployment() {
               <div className="text-sm font-heading font-semibold text-white mb-1">
                 {fact.title}
               </div>
-              <div className="text-xs text-white/65">{fact.desc}</div>
+              <div className="text-sm text-white/70">{fact.desc}</div>
             </motion.div>
           ))}
         </div>

@@ -52,7 +52,7 @@ export default function CurrentStatus() {
             >
               {stat.value}
             </div>
-            <div className="text-[10px] text-white/65 font-mono tracking-wider">
+            <div className="text-xs text-white/65 font-mono tracking-wider">
               {stat.label}
             </div>
           </motion.div>
@@ -120,7 +120,7 @@ export default function CurrentStatus() {
                 </div>
                 <div>
                   <div className="text-sm font-heading font-semibold text-amber-300 mb-0.5">{item.label}</div>
-                  <div className="text-xs text-white/60 leading-relaxed">{item.desc}</div>
+                  <div className="text-xs text-white/65 leading-relaxed">{item.desc}</div>
                 </div>
               </motion.div>
             ))}

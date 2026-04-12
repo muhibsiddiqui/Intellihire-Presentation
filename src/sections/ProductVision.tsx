@@ -53,7 +53,7 @@ export default function ProductVision() {
                 <div className="text-sm font-heading font-bold text-white">
                   {step.label}
                 </div>
-                <div className="text-[11px] text-white/65">{step.desc}</div>
+                <div className="text-xs text-white/70">{step.desc}</div>
               </motion.div>
               {i < journeySteps.length - 1 && (
                 <motion.div
@@ -78,7 +78,7 @@ export default function ProductVision() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pillars.map((p, i) => (
               <div key={i}>
-                <div className="text-[10px] font-mono text-brand-400 tracking-[0.2em] mb-2">
+                <div className="text-xs font-mono text-brand-400 tracking-[0.2em] mb-2">
                   {p.label}
                 </div>
                 <p className="text-sm text-white/75 leading-relaxed">

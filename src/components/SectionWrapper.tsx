@@ -47,7 +47,7 @@ export default function SectionWrapper({
               </h2>
             )}
             {subtitle && (
-              <p className="mt-4 text-lg text-white/40 max-w-3xl font-body leading-relaxed">
+              <p className="mt-4 text-xl text-white/65 max-w-3xl font-body leading-relaxed">
                 {subtitle}
               </p>
             )}

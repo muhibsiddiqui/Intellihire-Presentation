@@ -85,10 +85,10 @@ export default function PlatformLayers() {
                 {layer.icon}
               </div>
               <div>
-                <div className="text-[10px] font-mono tracking-[0.18em] mb-0.5" style={{ color: layer.color }}>
+                <div className="text-xs font-mono tracking-[0.18em] mb-0.5" style={{ color: layer.color }}>
                   LAYER {layer.num}
                 </div>
-                <h3 className="text-sm font-heading font-semibold text-white leading-tight">
+                <h3 className="text-base font-heading font-semibold text-white leading-tight">
                   {layer.title}
                 </h3>
               </div>
@@ -100,7 +100,7 @@ export default function PlatformLayers() {
             {/* Items */}
             <ul className="space-y-2">
               {layer.items.map((item, j) => (
-                <li key={j} className="flex items-start gap-2 text-xs text-white/70 leading-relaxed">
+                <li key={j} className="flex items-start gap-2 text-sm text-white/75 leading-relaxed">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: layer.color }} />
                   {item}
                 </li>

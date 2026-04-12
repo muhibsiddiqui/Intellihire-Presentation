@@ -1,120 +1,38 @@
 import { motion } from 'framer-motion'
 import SectionWrapper from '../components/SectionWrapper'
 
-/* Reusable animated SVG layer */
-function Layer({
-  y,
-  delay,
-  color,
-  title,
-  subtitle,
-  children,
-}: {
-  y: number
-  delay: number
-  color: string
-  title: string
-  subtitle: string
-  children?: React.ReactNode
-}) {
-  return (
-    <motion.g
-      initial={{ opacity: 0, y: -20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.5 }}
-    >
-      <rect
-        x="50"
-        y={y}
-        width="800"
-        height={children ? 130 : 80}
-        rx="12"
-        fill="#111b2e"
-        stroke={color}
-        strokeWidth="1.5"
-        opacity="0.85"
-      />
-      <text
-        x="450"
-        y={y + 28}
-        textAnchor="middle"
-        fill={color}
-        fontSize="14"
-        fontWeight="600"
-        fontFamily="Sora, sans-serif"
-      >
-        {title}
-      </text>
-      <text
-        x="450"
-        y={y + 50}
-        textAnchor="middle"
-        fill="#b0c4de"
-        fontSize="12"
-        fontFamily="DM Sans, sans-serif"
-      >
-        {subtitle}
-      </text>
-      {children}
-    </motion.g>
-  )
-}
+const layers = [
+  {
+    title: 'PRESENTATION LAYER',
+    tech: 'React 19 · TypeScript · Material UI · Socket.IO · WebRTC',
+    color: '#2f97f7',
+    gradient: 'from-[#2f97f7]/20 to-transparent',
+    modules: ['Interview UI', 'HR Dashboard', 'Candidate Portal', 'Analytics'],
+  },
+  {
+    title: 'APPLICATION LAYER',
+    tech: 'Flask 3.0 · JWT Auth · SQLAlchemy · Flask-CORS · Gunicorn',
+    color: '#00d4ff',
+    gradient: 'from-[#00d4ff]/20 to-transparent',
+    modules: ['Interview Engine', 'CV / HR Services', 'Proctoring Pipeline'],
+  },
+  {
+    title: 'AI / ML LAYER',
+    tech: 'DeepSeek · LangChain · ChromaDB · YOLOv8 · MediaPipe',
+    color: '#a855f7',
+    gradient: 'from-[#a855f7]/20 to-transparent',
+    modules: ['STT / TTS', 'RAG + Embeddings', 'Gaze & Object Detection'],
+  },
+  {
+    title: 'DATA LAYER',
+    tech: 'MySQL (Relational) · ChromaDB (Vector Store)',
+    color: '#10b981',
+    gradient: 'from-[#10b981]/20 to-transparent',
+    modules: ['User & Interview Data', 'Embeddings & Documents'],
+  },
+]
 
-function SubBox({
-  x,
-  y,
-  label,
-  color = '#2f97f7',
-}: {
-  x: number
-  y: number
-  label: string
-  color?: string
-}) {
-  return (
-    <>
-      <rect
-        x={x}
-        y={y}
-        width="220"
-        height="36"
-        rx="8"
-        fill="#1e2d4a"
-        stroke={color}
-        strokeWidth="0.5"
-      />
-      <text
-        x={x + 110}
-        y={y + 22}
-        textAnchor="middle"
-        fill="#58acee"
-        fontSize="11"
-        fontFamily="DM Sans, sans-serif"
-      >
-        {label}
-      </text>
-    </>
-  )
-}
-
-function Connector({ y1, y2, delay, color = '#2f97f7' }: { y1: number; y2: number; delay: number; color?: string }) {
-  return (
-    <motion.line
-      x1="450"
-      y1={y1}
-      x2="450"
-      y2={y2}
-      stroke={color}
-      strokeWidth="1.5"
-      strokeDasharray="6 4"
-      initial={{ pathLength: 0 }}
-      whileInView={{ pathLength: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.5 }}
-    />
-  )
-}
+const connectorLabels = ['REST + WebSocket', 'LangChain / API Calls', 'ORM + Vector Queries']
 
 export default function Architecture() {
   return (
@@ -125,71 +43,91 @@ export default function Architecture() {
       subtitle="A four-layer architecture powering intelligent recruitment automation"
       dark
     >
-      <div className="flex-1 flex items-center justify-center -mt-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="w-full max-w-5xl"
-        >
-          <svg viewBox="0 0 900 560" className="w-full h-auto" fill="none">
-            {/* Layer 1 — Frontend */}
-            <Layer y={20} delay={0.15} color="#2f97f7" title="PRESENTATION LAYER" subtitle="React 19 · TypeScript · Material UI · Socket.IO Client · WebRTC">
-              <text x="450" y={84} textAnchor="middle" fill="#94a3b8" fontSize="12" fontFamily="DM Sans, sans-serif">
-                Interview UI • HR Dashboard • Candidate Portal • Analytics Dashboard
-              </text>
-            </Layer>
+      <div className="flex-1 flex items-center justify-center">
+        <div className="w-full max-w-4xl space-y-0">
+          {layers.map((layer, i) => (
+            <div key={i}>
+              {/* Layer card */}
+              <motion.div
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.5 }}
+                className="relative rounded-2xl overflow-hidden"
+                style={{ border: `2px solid ${layer.color}60` }}
+              >
+                {/* Glow bg */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${layer.gradient} opacity-50`}
+                />
+                <div className="relative p-6 sm:p-8">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mb-5">
+                    <div className="flex items-center gap-4">
+                      <div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center text-base font-bold font-mono"
+                        style={{ backgroundColor: `${layer.color}25`, color: layer.color, border: `2px solid ${layer.color}60` }}
+                      >
+                        L{i + 1}
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-heading font-bold tracking-wide" style={{ color: layer.color }}>
+                        {layer.title}
+                      </h3>
+                    </div>
+                    <div className="hidden sm:block h-px flex-1" style={{ backgroundColor: `${layer.color}30` }} />
+                    <span className="text-xs sm:text-sm text-white/65 font-mono leading-tight">
+                      {layer.tech}
+                    </span>
+                  </div>
 
-            <Connector y1={105} y2={140} delay={0.3} />
-            <text x="470" y={128} fill="#2f97f7" fontSize="9" fontFamily="JetBrains Mono, monospace" opacity="0.6">
-              REST + WebSocket (Socket.IO)
-            </text>
+                  {/* Module chips */}
+                  <div className="flex flex-wrap gap-3">
+                    {layer.modules.map((mod, j) => (
+                      <motion.span
+                        key={j}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.15 + j * 0.06, duration: 0.3 }}
+                        className="px-4 py-2 rounded-xl text-sm font-semibold"
+                        style={{
+                          backgroundColor: `${layer.color}18`,
+                          color: layer.color,
+                          border: `1px solid ${layer.color}45`,
+                        }}
+                      >
+                        {mod}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
 
-            {/* Layer 2 — Backend */}
-            <Layer y={140} delay={0.3} color="#1a7ad8" title="APPLICATION LAYER" subtitle="Flask 3.0 · JWT Auth · SQLAlchemy ORM · Flask-CORS · Gunicorn">
-              <SubBox x={80} y={210} label="Interview Engine" />
-              <SubBox x={340} y={210} label="CV / HR Services" />
-              <SubBox x={600} y={210} label="Proctoring Pipeline" />
-            </Layer>
-
-            <Connector y1={270} y2={305} delay={0.5} color="#1a7ad8" />
-
-            {/* Layer 3 — AI/ML */}
-            <Layer y={305} delay={0.5} color="#58acee" title="AI / ML LAYER" subtitle="">
-              <text x="175" y={355} textAnchor="middle" fill="#58acee" fontSize="11" fontFamily="DM Sans, sans-serif">
-                DeepSeek API → LangChain
-              </text>
-              <text x="450" y={355} textAnchor="middle" fill="#58acee" fontSize="11" fontFamily="DM Sans, sans-serif">
-                ChromaDB (RAG)
-              </text>
-              <text x="725" y={355} textAnchor="middle" fill="#58acee" fontSize="11" fontFamily="DM Sans, sans-serif">
-                YOLOv8 + MediaPipe
-              </text>
-              <text x="175" y={380} textAnchor="middle" fill="#94a3b8" fontSize="12" fontFamily="DM Sans, sans-serif">
-                STT / TTS · Embeddings
-              </text>
-              <text x="450" y={380} textAnchor="middle" fill="#94a3b8" fontSize="12" fontFamily="DM Sans, sans-serif">
-                Sentence Transformers
-              </text>
-              <text x="725" y={380} textAnchor="middle" fill="#94a3b8" fontSize="12" fontFamily="DM Sans, sans-serif">
-                OpenCV · Gaze Detection
-              </text>
-            </Layer>
-
-            <Connector y1={435} y2={465} delay={0.7} color="#58acee" />
-
-            {/* Layer 4 — Data */}
-            <Layer y={465} delay={0.7} color="#0f4a88" title="DATA LAYER" subtitle="">
-              <text x="300" y={515} textAnchor="middle" fill="#b0c4de" fontSize="13" fontFamily="DM Sans, sans-serif">
-                MySQL (Relational)
-              </text>
-              <text x="600" y={515} textAnchor="middle" fill="#b0c4de" fontSize="13" fontFamily="DM Sans, sans-serif">
-                ChromaDB (Vector Store)
-              </text>
-            </Layer>
-          </svg>
-        </motion.div>
+              {/* Connector */}
+              {i < layers.length - 1 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 + 0.3, duration: 0.4 }}
+                  className="flex flex-col items-center py-1"
+                >
+                  <div className="w-0.5 h-5" style={{ background: `linear-gradient(to bottom, ${layer.color}80, ${layers[i + 1].color}80)` }} />
+                  <div
+                    className="px-4 py-1.5 rounded-full text-xs font-mono font-medium"
+                    style={{ color: layer.color, backgroundColor: `${layer.color}15`, border: `1px solid ${layer.color}35` }}
+                  >
+                    {connectorLabels[i]}
+                  </div>
+                  <div className="w-0.5 h-5" style={{ background: `linear-gradient(to bottom, ${layer.color}80, ${layers[i + 1].color}80)` }} />
+                  <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke={layers[i + 1].color} strokeWidth="2" strokeLinecap="round" />
+                  </svg>
+                </motion.div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   )

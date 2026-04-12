@@ -91,7 +91,7 @@ export default function Conclusion() {
           <h4 className="text-sm font-heading font-semibold text-brand-300 mb-2">
             Next Step: Live Deployment
           </h4>
-          <p className="text-xs text-white/70 leading-relaxed">
+          <p className="text-sm text-white/70 leading-relaxed">
             IntelliHire is production-ready and targeting deployment on Contabo Cloud VPS.
             The next milestone is onboarding real companies and candidates — demo accounts,
             a marketing landing page, and a subscription billing system are all prepared and
@@ -110,12 +110,31 @@ export default function Conclusion() {
           <p className="text-sm text-white/65 font-mono">
             IntelliHire — FAST NUCES Karachi — FYP 2025-2026
           </p>
-          <p className="text-xs text-white/55 mt-2">
+          <p className="text-sm text-white/55 mt-2">
             Muhammad Omer Khan · Muhib Siddiqui · Syed Muhammad Salik Ahmed
           </p>
-          <p className="text-xs text-white/50 mt-1">
+          <p className="text-sm text-white/50 mt-1">
             Supervised by Miss Sobia Iftikhar
           </p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 1 }}
+            className="mt-10 text-2xl sm:text-3xl font-heading font-bold gradient-text"
+          >
+            Thank You!
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 1.2 }}
+            className="text-sm text-white/50 mt-2"
+          >
+            We appreciate your time and welcome any questions.
+          </motion.p>
         </motion.div>
       </div>
     </section>

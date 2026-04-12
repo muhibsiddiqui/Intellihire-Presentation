@@ -191,7 +191,7 @@ export default function InterviewFlow() {
                 <div className="flex-1 glass-card p-5 hover:border-brand-400/25 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-1.5">
                     <span
-                      className="text-[10px] font-mono px-2 py-0.5 rounded-md font-semibold tracking-wider"
+                      className="text-xs font-mono px-2 py-0.5 rounded-md font-semibold tracking-wider"
                       style={{
                         color: step.color,
                         backgroundColor: `${step.color}12`,
@@ -219,7 +219,7 @@ export default function InterviewFlow() {
             className="flex items-center gap-3 mb-5"
           >
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand-400/20 to-transparent" />
-            <span className="text-xs font-mono text-brand-400/60 tracking-widest">
+            <span className="text-sm font-mono text-brand-400/70 tracking-widest">
               UNDER THE HOOD
             </span>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-brand-400/20 to-transparent" />

@@ -86,7 +86,7 @@ export default function Objectives() {
                 {obj.icon}
               </div>
               <div className="pt-1">
-                <div className="text-xs font-mono text-brand-400/50 mb-1">
+                <div className="text-sm font-mono text-brand-400/65 mb-1">
                   0{i + 1}
                 </div>
                 <h3 className="text-lg font-heading font-semibold text-white leading-snug">
