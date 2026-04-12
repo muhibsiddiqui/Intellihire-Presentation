@@ -85,7 +85,7 @@ export default function CurrentStatus() {
                   <circle cx="8" cy="8" r="7" stroke="#10b981" strokeWidth="1" />
                   <path d="M5 8l2 2 4-4" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                {item}
+                <span className="text-white/90 text-lg leading-relaxed">{item}</span>
               </motion.div>
             ))}
           </div>
@@ -119,8 +119,8 @@ export default function CurrentStatus() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm font-heading font-semibold text-amber-300 mb-0.5">{item.label}</div>
-                  <div className="text-xs text-white/65 leading-relaxed">{item.desc}</div>
+                  <div className="text-white/90 text-lg leading-relaxed font-semibold">{item.label}</div>
+                  <div className="text-base text-white/80 leading-relaxed">{item.desc}</div>
                 </div>
               </motion.div>
             ))}

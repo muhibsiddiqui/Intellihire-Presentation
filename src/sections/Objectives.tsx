@@ -98,7 +98,7 @@ export default function Objectives() {
               {obj.points.map((point, j) => (
                 <li
                   key={j}
-                  className="flex gap-3 text-sm text-white/75 leading-relaxed"
+                  className="flex gap-3 text-base text-white/80 leading-relaxed"
                 >
                   <svg
                     className="mt-0.5 flex-shrink-0"

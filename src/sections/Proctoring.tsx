@@ -102,7 +102,8 @@ export default function Proctoring() {
             <h3 className="text-xl font-heading font-semibold text-white mb-3">
               {f.title}
             </h3>
-            <p className="text-sm text-white/70 leading-relaxed">{f.desc}</p>
+            <p className="text-lg text-white/80 leading-relaxed mb-2">{f.desc}</p>
+            <div className="text-sm font-mono text-white/60">{f.stats}</div>
           </motion.div>
         ))}
       </div>

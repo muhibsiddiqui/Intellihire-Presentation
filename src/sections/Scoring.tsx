@@ -145,7 +145,7 @@ export default function Scoring() {
                       {dim.weight}%
                     </span>
                   </div>
-                  <p className="text-sm text-white/70">{dim.desc}</p>
+                  <p className="text-lg text-white/80">{dim.desc}</p>
                   {/* Weight bar */}
                   <div className="mt-2 h-1 bg-navy-600 rounded-full overflow-hidden">
                     <motion.div

@@ -53,7 +53,7 @@ export default function ProductVision() {
                 <div className="text-sm font-heading font-bold text-white">
                   {step.label}
                 </div>
-                <div className="text-xs text-white/70">{step.desc}</div>
+                <div className="text-base text-white/80">{step.desc}</div>
               </motion.div>
               {i < journeySteps.length - 1 && (
                 <motion.div
@@ -81,7 +81,7 @@ export default function ProductVision() {
                 <div className="text-xs font-mono text-brand-400 tracking-[0.2em] mb-2">
                   {p.label}
                 </div>
-                <p className="text-sm text-white/75 leading-relaxed">
+                <p className="text-lg text-white/85 leading-relaxed">
                   {p.text}
                 </p>
               </div>

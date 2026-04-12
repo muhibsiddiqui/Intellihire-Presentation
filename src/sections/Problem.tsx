@@ -82,10 +82,10 @@ export default function Problem() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.15 + j * 0.08, duration: 0.4 }}
-                  className="flex gap-3 text-sm text-white/75 leading-relaxed"
+                  transition={{ delay: j * 0.08 }}
+                  className="text-base text-white/80 leading-relaxed flex gap-3"
                 >
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400/50 flex-shrink-0" />
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 flex-shrink-0" />
                   {point}
                 </motion.li>
               ))}
