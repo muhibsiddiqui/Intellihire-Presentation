@@ -8,6 +8,7 @@ import TechStack from './sections/TechStack'
 import InterviewFlow from './sections/InterviewFlow'
 import Proctoring from './sections/Proctoring'
 import Scoring from './sections/Scoring'
+import Screenshots from './sections/Screenshots'
 import HRChatbot from './sections/HRChatbot'
 import CurrentStatus from './sections/CurrentStatus'
 import ProductVision from './sections/ProductVision'
@@ -24,6 +25,7 @@ const sections = [
   { id: 'interview-flow', label: 'Interview Flow' },
   { id: 'proctoring', label: 'Proctoring' },
   { id: 'scoring', label: 'Scoring' },
+  { id: 'screenshots', label: 'Screenshots' },
   { id: 'hr-chatbot', label: 'HR Chatbot' },
   { id: 'current-status', label: 'Status' },
   { id: 'product-vision', label: 'Vision' },
@@ -67,6 +69,7 @@ export default function App() {
         <InterviewFlow />
         <Proctoring />
         <Scoring />
+        <Screenshots />
         <HRChatbot />
         <CurrentStatus />
         <ProductVision />

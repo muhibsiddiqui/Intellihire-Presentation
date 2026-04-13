@@ -99,17 +99,10 @@ export default function HRChatbot() {
             {/* Screenshot area */}
             <div className="relative aspect-[4/3] bg-navy-950/80 flex items-center justify-center">
               <img
-                src="https://placehold.co/800x600/0f172a/2f97f7?text=HR+Chatbot+Screenshot"
+                src="/CHATBOT.jpeg"
                 alt="HR Chatbot Screenshot"
                 className="w-full h-full object-cover"
               />
-              {/* Overlay label */}
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="glass-card px-4 py-2.5 flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-brand-400 animate-pulse" />
-                  <span className="text-sm text-white/70 font-mono">Screenshot placeholder — will be replaced</span>
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
