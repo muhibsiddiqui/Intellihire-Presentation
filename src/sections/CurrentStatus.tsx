@@ -18,7 +18,20 @@ const completed = [
   'Demo & Handover — supervisor demo, documentation finalization, and FYP submission package',
 ]
 
-const remaining: { label: string; desc: string }[] = []
+const remaining: { label: string; desc: string }[] = [
+  {
+    label: 'Rigorous Testing',
+    desc: 'Continuous integration, automated regression tests, and stress testing for long-term reliability.'
+  },
+  {
+    label: 'Scalability Improvements',
+    desc: 'Optimize for higher concurrent users, horizontal scaling, and cloud-native deployment.'
+  },
+  {
+    label: 'User Feedback Integration',
+    desc: 'Gather feedback from real users and iterate on features and UX based on real-world usage.'
+  },
+]
 
 const stats = [
   { label: 'Backend API Routes', value: '40+', color: '#2f97f7' },
