@@ -13,13 +13,12 @@ const completed = [
   'Marketing landing page with pricing & onboarding flow',
   'Role-based access control (Admin / HR / Candidate)',
   'Successfully deployed on Contabo VPS with live domain intellihire.com.pk',
+  'Production Monitoring — uptime, logs, and resource stability on live Contabo VPS',
+  'End-to-End Testing — full QA across all portals, edge cases, and concurrent interview stress tests',
+  'Demo & Handover — supervisor demo, documentation finalization, and FYP submission package',
 ]
 
-const remaining = [
-  { label: 'Production Monitoring', desc: 'Continue observing uptime, logs, resource usage, and stability on the live Contabo VPS environment' },
-  { label: 'End-to-End Testing', desc: 'Complete final QA pass across all portals, edge cases, and concurrent interview stress tests on the deployed system' },
-  { label: 'Demo & Handover', desc: 'Supervisor demo session, documentation finalization, and FYP submission package using the live deployment' },
-]
+const remaining: { label: string; desc: string }[] = []
 
 const stats = [
   { label: 'Backend API Routes', value: '40+', color: '#2f97f7' },
@@ -102,7 +101,7 @@ export default function CurrentStatus() {
         >
           <h3 className="text-lg font-heading font-semibold text-white mb-5 flex items-center gap-3">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
-            What Remains
+            Future Enhancements
           </h3>
           <div className="space-y-4">
             {remaining.map((item, i) => (
