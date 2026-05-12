@@ -12,12 +12,13 @@ const completed = [
   'Candidate portal with slot booking & results view',
   'Marketing landing page with pricing & onboarding flow',
   'Role-based access control (Admin / HR / Candidate)',
+  'Successfully deployed on Contabo VPS with live domain intellihire.com.pk',
 ]
 
 const remaining = [
-  { label: 'Cloud Deployment', desc: 'Deploying full stack on Contabo VPS — Nginx, PM2, MySQL, ChromaDB live setup' },
-  { label: 'End-to-End Testing', desc: 'Full QA pass across all portals, edge cases, and concurrent interview stress tests' },
-  { label: 'Demo & Handover', desc: 'Supervisor demo session, documentation finalization, and FYP submission package' },
+  { label: 'Production Monitoring', desc: 'Continue observing uptime, logs, resource usage, and stability on the live Contabo VPS environment' },
+  { label: 'End-to-End Testing', desc: 'Complete final QA pass across all portals, edge cases, and concurrent interview stress tests on the deployed system' },
+  { label: 'Demo & Handover', desc: 'Supervisor demo session, documentation finalization, and FYP submission package using the live deployment' },
 ]
 
 const stats = [
@@ -33,7 +34,7 @@ export default function CurrentStatus() {
       id="current-status"
       badge="Where We Stand"
       title="Current Status"
-      subtitle="Core system complete — final framing, deployment and testing in progress"
+      subtitle="Core system complete, deployed live on Contabo VPS, and now in final QA, demo, and handover phase"
     >
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">

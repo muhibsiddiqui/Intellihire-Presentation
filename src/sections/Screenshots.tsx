@@ -43,7 +43,7 @@ export default function Screenshots() {
       id="screenshots"
       badge="Platform Preview"
       title="Snapshots"
-      subtitle="A visual walkthrough of the IntelliHire platform across its key modules"
+      subtitle="A visual walkthrough of the live IntelliHire platform, now deployed and running at intellihire.com.pk"
     >
       <div className="flex flex-col gap-8 flex-1">
         {/* Thumbnail tabs */}
@@ -94,7 +94,7 @@ export default function Screenshots() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
                   <div className="w-3 h-3 rounded-full bg-green-500/70" />
                   <span className="ml-3 text-xs font-mono" style={{ color: `${current.color}cc` }}>
-                    ◆ IntelliHire — {current.title}
+                    ◆ intellihire.com.pk — {current.title}
                   </span>
                 </div>
                 <img
@@ -116,6 +116,9 @@ export default function Screenshots() {
                 </span>
                 <h3 className="text-2xl font-heading font-bold text-white mb-3">{current.title}</h3>
                 <p className="text-base text-white/70 leading-relaxed">{current.desc}</p>
+                <p className="text-sm text-white/50 font-mono mt-3">
+                  Live deployment: intellihire.com.pk on Contabo VPS
+                </p>
               </div>
 
               {/* Nav arrows */}

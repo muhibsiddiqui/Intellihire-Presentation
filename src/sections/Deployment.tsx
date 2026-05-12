@@ -7,7 +7,7 @@ export default function Deployment() {
       id="deployment"
       badge="Infrastructure"
       title="Deployment Architecture"
-      subtitle="Production-ready infrastructure built for reliability, performance, and cost efficiency"
+      subtitle="Live production infrastructure running on Contabo VPS and serving IntelliHire at intellihire.com.pk"
       dark
     >
       <div className="flex-1 space-y-10">
@@ -24,7 +24,7 @@ export default function Deployment() {
             {[
               { x: 50, label: 'Vercel', sub: 'Landing Page + Marketing', color: '#2f97f7' },
               { x: 350, label: 'GitHub Actions', sub: 'CI/CD Pipeline', color: '#00d4ff' },
-              { x: 650, label: 'Hostinger', sub: 'Domain + Email Mailboxes', color: '#a855f7' },
+              { x: 650, label: 'Domain Routing', sub: 'intellihire.com.pk + Email', color: '#a855f7' },
             ].map((svc, i) => (
               <motion.g
                 key={i}
@@ -86,7 +86,7 @@ export default function Deployment() {
               fontFamily="JetBrains Mono, monospace"
               opacity="0.55"
             >
-              SSH + git pull + build
+              CI/CD to live server
             </text>
 
             {/* ── VPS box ── */}
@@ -239,9 +239,9 @@ export default function Deployment() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             {
-              title: 'Deploy Time',
-              value: '< 60s',
-              desc: 'Push to main → auto SSH → git pull → build → pm2 restart → live',
+              title: 'Live URL',
+              value: 'intellihire.com.pk',
+              desc: 'Production deployment is active and publicly accessible through the custom domain',
             },
             {
               title: 'Uptime Monitoring',

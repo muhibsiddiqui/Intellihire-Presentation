@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 const points = [
   'IntelliHire is a fully functional FYP — built end-to-end with real-world architecture, not a prototype or proof-of-concept',
   'Covers the complete hiring pipeline: job posting, CV screening, AI-driven interviews, proctoring, scoring, and HR dashboards',
-  'Demonstrates deep full-stack capability — React, Flask, AI/ML integration, WebRTC, DevOps, and cloud deployment readiness',
-  'Designed and structured for real deployment — the codebase, infrastructure, and pricing model are production-ready and awaiting launch',
+  'Demonstrates deep full-stack capability — React, Flask, AI/ML integration, WebRTC, DevOps, and live cloud deployment on Contabo VPS',
+  'Now deployed and working at intellihire.com.pk with production infrastructure, domain routing, and operational readiness',
 ]
 
 export default function Conclusion() {
@@ -32,10 +32,10 @@ export default function Conclusion() {
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold tracking-tight mb-4 leading-[1.1]">
             <span className="text-white">Project</span>
             <br />
-            <span className="gradient-text">Complete &amp; Deploy-Ready</span>
+            <span className="gradient-text">Complete &amp; Live</span>
           </h2>
           <p className="text-lg text-white/65 max-w-2xl mx-auto mt-4">
-            IntelliHire is a fully working FYP — engineered to production standards and ready for real-world deployment.
+            IntelliHire is a fully working FYP — engineered to production standards, deployed successfully, and now running live.
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export default function Conclusion() {
         >
           <div className="w-3 h-3 rounded-full bg-brand-400 animate-pulse" />
           <span className="text-lg font-heading font-semibold text-white">
-            Deployment-Ready FYP
+            Live Production FYP
           </span>
         </motion.div>
 
@@ -89,13 +89,12 @@ export default function Conclusion() {
           className="mt-12 glass-card p-6 text-left max-w-2xl mx-auto"
         >
           <h4 className="text-sm font-heading font-semibold text-brand-300 mb-2">
-            Next Step: Live Deployment
+            Now Live
           </h4>
           <p className="text-sm text-white/70 leading-relaxed">
-            IntelliHire is production-ready and targeting deployment on Contabo Cloud VPS.
-            The next milestone is onboarding real companies and candidates — demo accounts,
-            a marketing landing page, and a subscription billing system are all prepared and
-            awaiting go-live.
+            IntelliHire is now deployed on Contabo Cloud VPS and accessible at intellihire.com.pk.
+            The next milestone is onboarding real companies and candidates while continuing
+            production monitoring, final QA, and polish across the live system.
           </p>
         </motion.div>
 
