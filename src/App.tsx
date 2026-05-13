@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import Navigation from './components/Navigation'
 import Hero from './sections/Hero'
+import Introduction from './sections/Introduction'
 import Problem from './sections/Problem'
+import LiteratureReview from './sections/LiteratureReview'
 import Objectives from './sections/Objectives'
 import Architecture from './sections/Architecture'
 import TechStack from './sections/TechStack'
@@ -18,7 +20,9 @@ import Conclusion from './sections/Conclusion'
 
 const sections = [
   { id: 'hero', label: 'Home' },
+  { id: 'introduction', label: 'Introduction' },
   { id: 'problem', label: 'Problem' },
+  { id: 'literature-review', label: 'Related Work' },
   { id: 'objectives', label: 'Objectives' },
   { id: 'architecture', label: 'Architecture' },
   { id: 'tech-stack', label: 'Tech Stack' },
@@ -62,7 +66,9 @@ export default function App() {
       <Navigation sections={sections} activeSection={activeSection} />
       <main>
         <Hero />
+        <Introduction />
         <Problem />
+        <LiteratureReview />
         <Objectives />
         <Architecture />
         <TechStack />
